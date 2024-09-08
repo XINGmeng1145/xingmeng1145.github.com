@@ -1,0 +1,262 @@
+@keyframes text-style-1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+
+.text-style-1 {
+  font-size: 30px;
+  background-image: linear-gradient(to right, rgb(17, 207, 131) , rgb(125, 13, 217), green, yellow, red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 100%;
+  color: transparent;
+  animation: text-style-1 2s infinite linear;
+}
+
+ .btn-animate {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: #02fb76;
+  color: #fff;
+  text-align: center;
+}
+
+.btn-animate__overlap-horizontal {
+  z-index: 1;
+
+  &::after {
+    left: auto;
+    right: 0;
+  }
+
+  &::before, &::after, & > span::before, & > span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(0, 213, 228, 0.25);
+    transition: 0.4s;
+    z-index: -1;
+  }
+
+  & > span::before, & > span::after {
+    transition-delay: 0.4s;
+  }
+
+  & > span::before {
+    left: auto;
+    right: 0;
+  }
+
+  &:hover {
+    &::before, &::after, & > span::before, & > span::after {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes text-style-2 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+
+.text-style-2 {
+  font-size: 30px;
+  background-image: linear-gradient(to right, rgb(83, 154, 126) , rgb(34, 171, 91), green, yellow, rgb(167, 31, 31));
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 100%;
+  color: transparent;
+  animation: text-style-1 2s infinite linear;
+}
+
+ 
+@keyframes borderAnimation3 {
+  0%,100% {
+    background-position:0%,50%;
+  }
+  50% {
+    background-position:100%,50%;
+  }
+}
+
+
+.border-style-3 {
+  position: relative;
+  width: 200px;
+  height: 100px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(60deg, aquamarine, cornflowerblue, goldenrod, hotpink, salmon, lightgreen, sandybrown, violet);
+    background-size: 300%;
+    z-index: -2;
+    border-radius: 5px;
+    animation: borderAnimation3 5s infinite;
+  }
+
+  &::after {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: calc(100% - 10px);
+     height: calc(100% - 10px);
+     z-index: -1;
+     background: white;
+     border-radius: 5px;
+  }
+  
+  
+  &> .content {
+      padding: 10px;
+  }
+
+}
+
+ header {
+  background-color: rgb(40, 34, 34);
+  height: 90px;
+  width:110%;
+}
+header ul {
+  display:inline;
+  position: absolute;
+  right:3vw;
+  top:0 ;
+  line-height: 80px ;
+}
+header a {
+  color:white;
+  text-decoration: none;
+}
+header a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  position: absolute;
+  left: 70px ;
+  top: 0;
+  line-height: 80px;
+  background-image:url(IMG/qwqhaha.png) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 210px;
+  text-indent: 40px;
+}
+.btn-animate2 {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: #acc016;
+  color: #fff;
+  text-align: center;
+}
+
+ .mine {
+  z-index: 1;
+
+  &::after {
+    left: auto;
+    right: 0;
+  }
+
+  &::before, &::after, & > span::before, & > span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(144, 207, 91, 0.25);
+    transition: 0.4s;
+    z-index: -1;
+  }
+
+  & > span::before, & > span::after {
+    transition-delay: 0.4s;
+  }
+
+  & > span::before {
+    left: auto;
+    right: 0;
+  }
+
+  &:hover {
+    &::before, &::after, & > span::before, & > span::after {
+      width: 100%;
+    }
+  }
+}
+  
+@media screen and (max-width: 768px) {
+
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.border-style-8 {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 5px;
+    background-image: conic-gradient(transparent, #f90, transparent 30%);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    animation: rotate 2s linear infinite;
+    z-index: -2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    z-index: -1;
+    background: white;
+    border-radius: 5px;
+  }
+
+  & > .content {
+    padding: 10px;
+  }
+}
